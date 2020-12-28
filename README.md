@@ -90,3 +90,27 @@ In the `bash` command line,
 bash demo.sh
 ```
 The demo script runs `main.py`.
+
+## Demo Output
+Running the demo script will execute the following steps:
+1. Downloads the dataset
+2. Constructs a multi-resolution cross-context tree (MRCCT)
+3. Extracts embeddings for graphs with Hierarchical GCN
+4. Train and evaluate
+
+Demo script results in an output on the terminal like below.
+```bash
+Downloading https://www.chrsmrrs.com/graphkerneldatasets/MUTAG.zip
+Extracting data/MUTAG/MUTAG.zip
+Processing...
+Done!
+Loading MUTAG dataset...
+Epoch: 0001 loss_train: 0.6743 acc_train: 0.6833 loss_val: 0.6843 acc_val: 0.6333 time: 0.0450s
+...
+...
+...
+Epoch: 0100 loss_train: 0.1087 acc_train: 0.8833 loss_val: 0.1093 acc_val: 0.8667 time: 0.0119s
+Optimization Finished!
+Total time elapsed: 1.3520s
+Test set results: loss= 0.1097 accuracy= 0.8649
+```
